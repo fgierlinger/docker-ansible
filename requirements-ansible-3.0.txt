@@ -1,2 +1,0 @@
-ansible==3.0.0
-ansible-lint[core,yamllint]>=5
