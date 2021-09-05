@@ -43,7 +43,7 @@ jobs:
             REQUIREMENT=requirements-ansible-${{ matrix.version }}.txt
       - 
         name: Build ${{ matrix.beats }}:${{ matrix.version }} and push
-        if: github.event_name == 'push'
+        if: github.ref == 'refs/heads/master'
         uses: docker/build-push-action@v2
         with:
           push: true
